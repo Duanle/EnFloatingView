@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdk 30
     defaultConfig {
         applicationId "com.imuxuan.en.floatingview"
         minSdkVersion 14
@@ -16,6 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '30.0.2'
 }
 
 dependencies {

@@ -3,14 +3,15 @@ package com.imuxuan.floatingview;
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.LayoutRes;
-import android.support.v4.view.ViewCompat;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.LayoutRes;
+import androidx.core.view.ViewCompat;
 
 import com.imuxuan.floatingview.utils.EnContext;
 
@@ -77,6 +78,17 @@ public class FloatingView implements IFloatingView {
             enFloatingView.setLayoutParams(mLayoutParams);
             enFloatingView.setIconImage(mIconRes);
             addViewToWindow(enFloatingView);
+        }
+    }
+
+    public void setIcon(@DrawableRes int resId){
+        mIconRes = resId;
+        synchronized (this) {
+            if (mEnFloatingView == null) {
+                return;
+            }
+            EnFloatingView enFloatingView = (EnFloatingView) mEnFloatingView;
+            enFloatingView.setIconImage(mIconRes);
         }
     }
 

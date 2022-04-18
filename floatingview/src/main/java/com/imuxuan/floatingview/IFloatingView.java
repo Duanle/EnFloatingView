@@ -1,10 +1,11 @@
 package com.imuxuan.floatingview;
 
 import android.app.Activity;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.LayoutRes;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * Created by Yunpeng Li on 2018/3/15.
